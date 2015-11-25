@@ -58,6 +58,7 @@
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.2",
     "react-native": "^0.14.2",
+    "react-native-vector-icons": "^0.8.5",
     "run-sequence": "^1.0.2",
     "serve-favicon": "^2.2.0",
     "shortid": "^2.2.4",
