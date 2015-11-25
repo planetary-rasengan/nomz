@@ -42,7 +42,7 @@ router.get('/:id', ensureAuthenticated, function(req, res) {
   .catch(function(err) { res.sendStatus(404); })
 })
 
-router.get('full/:id', ensureAuthenticated, function(req, res) {
+router.get('/full/:id', ensureAuthenticated, function(req, res) {
   fsHelper.venue({ venue_id: req.params.id })
   .then(function(venue) {
       res.json(venue.response)
