@@ -13,10 +13,16 @@ var schema = new mongoose.Schema({
         type: String
     },
     password: {
-        type: String
+        type: String,
+        select: false
     },
     salt: {
-        type: String
+        type: String,
+        select: false
+    },
+    follows: {
+        type: [Number],
+        ref: 'User'
     },
     posts: [{
         _id: {
@@ -41,13 +47,10 @@ var schema = new mongoose.Schema({
           type: Number
         },
         menuItem: {
-          type: ObjectId,
+          type: String,
           ref: 'MenuItem'
         }
-    }],
-    tags: {
-      type: [String]
-    }
+    }]
 });
 
 // generateSalt, encryptPassword and the pre 'save' and 'correctPassword' operations
@@ -80,5 +83,10 @@ schema.statics.encryptPassword = encryptPassword;
 schema.method('correctPassword', function (candidatePassword) {
     return encryptPassword(candidatePassword, this.salt) === this.password;
 });
+
+schema.methods.getFollows = function(id) {
+    return this.model.find({ follows: id })
+}
+
 
 mongoose.model('User', schema);

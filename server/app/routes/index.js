@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 module.exports = router;
 
-router.use('/user', require('./members'));
+router.use('/users', require('./users'));
 router.use('/game', require('./game.js'));
 router.use('/venue', require('./venue.js'));
 router.use('/feed', require('./feed.js'));
