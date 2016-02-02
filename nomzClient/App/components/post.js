@@ -73,17 +73,11 @@ var styles = StyleSheet.create({
     backgroundColor: 'transparant'
   },
   post: {
-    // borderWidth: 3,
     borderRadius: 5,
-    // borderColor: '#000',
     width: 350,
     height: 350,
-    // paddingTop: 10,
     paddingBottom: 10,
-    // paddingLeft: 5,
-    // paddingRight: 5,
     marginBottom: 20,
-    // backgroundColor: 'rgba(255, 255, 255, 0.8)',
     backgroundColor: 'white',
     opacity: 2
   },
@@ -98,7 +92,6 @@ var styles = StyleSheet.create({
   postImage: {
 
     borderRadius: 5,
-    // height: 250,
     flex: 1
   },
   postInfoRow: {
@@ -110,14 +103,11 @@ var styles = StyleSheet.create({
     marginLeft: 5
   },
   postUser: {
-    // marginTop: 10,
-    // color: 'purple'
     fontSize: 14,
     color: '#900'
   },
   nomzIcon: {
     top: -5,
-    // paddingBottom: 10,
     marginRight: 5
   },
   bgImg: {
@@ -130,7 +120,6 @@ var styles = StyleSheet.create({
   },
   imageWrap: {
     flex: 1,
-    // justifyContent: 'center',
     alignItems: 'stretch',
     flexDirection: 'column',
     backgroundColor: 'transparant'

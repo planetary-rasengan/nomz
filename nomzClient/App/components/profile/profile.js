@@ -153,7 +153,6 @@ var styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center'
-    // marginTop: 10
   },
   header: {
     backgroundColor: 'rgba(2, 2, 2, 0.6)',
@@ -168,7 +167,6 @@ var styles = StyleSheet.create({
     color: 'white'
   },
   headerStats: {
-    // backgroundColor: 'blue',
     justifyContent: 'space-between',
     flex: 1,
     flexDirection: 'row',
@@ -176,13 +174,8 @@ var styles = StyleSheet.create({
     marginLeft: 40,
     marginTop: 10
   },
-  // bottom: {
-  //   backgroundColor: 'blue',
-  //   height: 400
-  // },
   stat: {
     color: 'white',
-    // fontSize: 16
   },
   num: {
     fontSize: 16,
@@ -195,16 +188,13 @@ var styles = StyleSheet.create({
     alignSelf: 'center'
   },
   badge: {
-    // marginTop: 30,
     marginBottom: 0
   },
   tabView: {
     width: deviceWidth,
     height: deviceHeight,
     flex: 1,
-    // justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: 'rgba(2, 2, 2, 0.6)'
   },
     bgImg: {
     position: 'absolute',
