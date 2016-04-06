@@ -28,7 +28,6 @@ class Post extends Component{
       postUser = (
           <View style={styles.postInfoRow}>
             <TouchableOpacity 
-            // style={styles.postUser}
             underlayColor='transparant'>
               <Text style={styles.postUser}> {this.props.postData.user} </Text>
             </TouchableOpacity>

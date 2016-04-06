@@ -16,9 +16,6 @@ class LoginButton extends Component {
 
   constructor(props) {
     super(props);
-    // this.propTypes = {
-    //   ...TouchableOpacity.propTypes
-    // }
   }
 
 
@@ -27,7 +24,6 @@ class LoginButton extends Component {
       title: 'Review Dishes',
       component: Auth,
       backButtonTitle: ' '
-      // backButtonTitle: 'Main Menu'
     });
   }
 
@@ -35,7 +31,6 @@ class LoginButton extends Component {
     return (
       <Button
         style={styles.btn}
-        // onPress={this.goToLogin.bind(this)}
         >
         {"Log in with Foursquare"}
       </Button>

@@ -71,7 +71,6 @@ class Profile extends Component {
 
 
   render() {
-    // var user = this.state.user || null
     if (!this.props.user) {
       return (
              <View style={styles.loading}>

@@ -82,7 +82,6 @@ router.get('/start', ensureAuthenticated, function (req, res) {
       })
     })
     .then(function() {
-      // console.log(imgArr);
       imgArr.forEach(v => {
         v.tags = [];
         v.categories.forEach(c => { v.tags.push(c.shortName) })
