@@ -19,12 +19,12 @@ router.param('id', function (req, res, next, id) {
 
 
 /*
-*  NEED ROUTES TO CREATE AND DELETE USERS
+* TODO: 
+* NEED ROUTES TO DELETE USERS
 *
 */
 
 
-// Get the user's own profile
 router.get('/me', function(req, res) {
   if (req.user) {
     res.json(req.user);
@@ -33,7 +33,6 @@ router.get('/me', function(req, res) {
   }
 })
 
-// Get another user's profile
 router.get('/:id', function(req, res, next) {
   // res.json(req.requestedUser);
   let followersPromise = req.requestedUser.getFollowers()
@@ -77,10 +76,6 @@ router.get('/:id/feed', function(req, res, next) {
     .then(null, next);
 })
 
-/*
- * NEED ROUTES TO CREATE AND DELETE POSTS
- *
-*/
 
 // Add a follower
 router.put('/:id/follow/:followedUser', function(req, res, next) {

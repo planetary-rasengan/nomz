@@ -65,8 +65,6 @@ class Feed extends Component{
   }
 
   _renderPost(data) {
-    // console.log(this.props)
-    // console.log(data)
     // return a view with the passed in data
     return (
       <Post postData={data} />
@@ -104,9 +102,7 @@ var styles = StyleSheet.create({
     backgroundColor: 'transparant'
   },
   post: {
-    // borderWidth: 3,
     borderRadius: 1,
-    // borderColor: '#000',
     width: 350,
     height: 350,
     paddingTop: 10,
@@ -114,7 +110,6 @@ var styles = StyleSheet.create({
     paddingLeft: 5,
     paddingRight: 5,
     marginBottom: 20,
-    // backgroundColor: 'rgba(255, 255, 255, 0.8)',
     backgroundColor: 'white',
     opacity: 2
   },
@@ -128,12 +123,10 @@ var styles = StyleSheet.create({
   },
   postImage: {
     borderRadius: 5,
-    // height: 250,
     flex: 1
   },
   postUser: {
     marginTop: 10,
-    // color: 'purple'
     color: '#900'
   },
   bgImg: {
@@ -146,7 +139,6 @@ var styles = StyleSheet.create({
   },
   imageWrap: {
     flex: 1,
-    // justifyContent: 'center',
     alignItems: 'stretch',
     flexDirection: 'column'
   },

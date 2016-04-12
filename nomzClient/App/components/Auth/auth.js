@@ -46,7 +46,6 @@ class LoginView extends Component {
             // If successful response from login, store userId in AsyncStorage
             return AsyncStorage.setItem('userId', res.user._id)
         }).then( (res) => {
-            // console.log('after setItem is called with the id:', id)
             // navigate to homepage once userId is stored
             this.props.navigator.replace({
                 component: Home,
@@ -141,12 +140,9 @@ var styles = StyleSheet.create({
         flex: 1,
         fontSize: 18,
         backgroundColor: 'rgba(255, 255, 255, 0.2)',
-        // color: "#555555",
         color: 'white',
-        // opacity: .2
     },
     icon: {
-        // color: '#555',
         color: 'white',
         height: 36,
         paddingLeft: 10,
@@ -190,21 +186,21 @@ var styles = StyleSheet.create({
         left: 0,
         right: 0,
         opacity: 0.9
-  },
-  subTextContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center'
-  },
-  subText: {
-    color: 'white',
-  },
-  link: {
-    color: Colors.pink
-  },
-  error: {
-    color: 'red'
-  }
+    },
+        subTextContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center'
+    },
+        subText: {
+        color: 'white',
+    },
+        link: {
+        color: Colors.pink
+    },
+        error: {
+        color: 'red'
+    }
 });
 
 module.exports = LoginView;

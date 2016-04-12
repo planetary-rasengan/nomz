@@ -50,7 +50,6 @@ var styles = StyleSheet.create({
     flex: 1,
     height: 70,
     width: deviceWidth,
-    // backgroundColor: 'red'
   },
   content: {
     flex: 1,
@@ -63,12 +62,9 @@ var styles = StyleSheet.create({
     borderRadius: 25,
     marginLeft: 5,
     marginRight: 10
-    // alignSelf: 'center'
   },
   userInfo: {
     flex: 1,
-    // flexDirection: 'column'
-    // backgroundColor: 'blue'
   },
   statsContainer: {
     flex: 1,

@@ -7,17 +7,14 @@ var MenuItem = require('mongoose').model('MenuItem')
 
 module.exports = router;
 
-var ensureAuthenticated = function (req, res, next) {
-  next(); // dont worry about authentication for now
-}
 
-// var ensureAuthenticated = function (req, res, next) {
-//     if (req.isAuthenticated()) {
-//         next();
-//     } else {
-//         res.status(401).end();
-//     }
-// };
+var ensureAuthenticated = function (req, res, next) {
+    if (req.isAuthenticated()) {
+        next();
+    } else {
+        res.status(401).end();
+    }
+};
 
 router.get('/safe', function(req, res) {
   let img = require('../services/safe-images.js');
@@ -85,7 +82,6 @@ router.get('/start', ensureAuthenticated, function (req, res) {
       })
     })
     .then(function() {
-      // console.log(imgArr);
       imgArr.forEach(v => {
         v.tags = [];
         v.categories.forEach(c => { v.tags.push(c.shortName) })

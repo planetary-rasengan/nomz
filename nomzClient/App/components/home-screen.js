@@ -27,12 +27,9 @@ var Homescreen = React.createClass({
 
 
   componentWillMount() {
-    console.log('mounting component...')
     let userId = this.props.userId;
-    console.log('api call for user:', userId)
     api.fetchUser(userId)
       .then( (user) => {
-        console.log('fetched user from api call:', user);
         this.setState({
           user: user,
           isLoggedIn: true,
@@ -47,7 +44,6 @@ var Homescreen = React.createClass({
       title: 'Review Dishes',
       component: Play,
       backButtonTitle: ' '
-      // backButtonTitle: 'Main Menu'
     });
   },
 
@@ -56,7 +52,6 @@ var Homescreen = React.createClass({
       title: 'Login',
       component: require('./Auth/auth'),
       backButtonTitle: ' '
-      // backButtonTitle: 'Main Menu'
     });
   },
 
@@ -95,8 +90,6 @@ var Homescreen = React.createClass({
   },
 
   render() {
-    console.log('homepage Props:', this.props)
-    console.log('homepage State:', this.state)
     var authButton;
     var feedButton;
     var profileButton;

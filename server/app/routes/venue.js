@@ -5,17 +5,14 @@ var fsHelper = require('./foursquare-helper.js')
 
 module.exports = router;
 
-var ensureAuthenticated = function (req, res, next) {
-  next(); // dont worry about authentication for now
-}
 
-// var ensureAuthenticated = function (req, res, next) {
-//     if (req.isAuthenticated()) {
-//         next();
-//     } else {
-//         res.status(401).end();
-//     }
-// };
+var ensureAuthenticated = function (req, res, next) {
+    if (req.isAuthenticated()) {
+        next();
+    } else {
+        res.status(401).end();
+    }
+};
 
 router.get('/near', ensureAuthenticated, function (req, res) {
   var ll = req.query.lat+","+req.query.long;
@@ -36,7 +33,6 @@ router.get('/near', ensureAuthenticated, function (req, res) {
 router.get('/:id', ensureAuthenticated, function(req, res) {
   fsHelper.venue({ venue_id: req.params.id })
   .then(function(venue) {
-    // res.json(venue.response.venue);
     res.json(_.pick(venue.response.venue,
       'id', 'name', 'contact', 'location', 'categories', 'url', 'ratings', 'hours', 'attributes', 'bestPhoto'));
   })

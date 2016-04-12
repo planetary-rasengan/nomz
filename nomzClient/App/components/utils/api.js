@@ -23,8 +23,6 @@ var api = {
         err.message = 'Bad Login'
         throw err
       } else {
-        // weird bug where the default server response
-        // causes a parse error if repsonse isnt a stringified object
         return res.json();
       }
     })
